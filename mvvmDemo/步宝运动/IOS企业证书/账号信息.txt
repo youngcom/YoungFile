@@ -1,0 +1,5 @@
+账号：wanglindafg@yahoo.com
+密码：PDLMdcse6321   
+Bundle id:com.qg.steprun
+推送证书密码：123456
+开发证书密码：1
