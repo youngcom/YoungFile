@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="young_hrms_release:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/young_hrms_release_war</output-path>
+    <root id="archive" name="young_hrms_release_war.war">
+      <element id="artifact" artifact-name="young_hrms:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<title>获取您的UDID</title>
+<body>
+<div id="content">
+	
+UDID:<input style="" name="" id="udid" value=""/> <br/><br/>
+<a class="buttons" href="../../../../../../../UDID/udid.mobileconfig">1.点击获取您的UDID</a><br/><br/>
+
+<a class="buttons" href="testudid://?function=valid&uuid=$udid">2.验证ipa</a>
+
+<script type="text/javascript">
+	function getUrlArgObject(){  
+    var args=new Object();  
+    var query=location.search.substring(1);//获取查询串  
+    var pairs=query.split(",");//在逗号处断开  
+    for(var i=0;i<pairs.length;i++){  
+        var pos=pairs[i].indexOf('=');//查找name=value  
+        if(pos==-1){//如果没有找到就跳过  
+            continue;  
+        }  
+        var argname=pairs[i].substring(0,pos);//提取name  
+        var value=pairs[i].substring(pos+1);//提取value  
+        args[argname]=unescape(value);//存为属性  
+    }  
+    return args;//返回对象  
+}
+var udid = getUrlArgObject()['udid']
+document.getElementById('udid').value = udid
+
+</script>
+
+</div>
+</body>
+</html>
